@@ -81,7 +81,6 @@ public class UsingJCAPI {
 
 	// Operaatio, joka iteroi säiliöidyn tiedon ja kohdistaa testin jokaiseen
 	public static void printTrafficCardsWithPredicate(ArrayList<TrafficCard> cardUsers, Predicate<TrafficCard> tester) {
-		Collections.sort(cardUsers, new TravellerNumberComparator());
 		cardUsers.sort((TrafficCard t1, TrafficCard t2) -> t1.getTravellernumber().compareTo(t2.getTravellernumber()));
 		for (TrafficCard t : cardUsers) {
 			if (tester.test(t)) {
